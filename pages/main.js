@@ -18,6 +18,7 @@ import { useGlobalState } from "../lib/global-state.js";
 // todo: feature - add being able to add ones dynamically
 // todo: add sections with shapes, elements with shapes
 // todo: ooh interesting, mix up the photos between the layers
+// todo: can i put the bg urls in config?
 // zod?
 // maybe add some framer motion and reveals.
 // later: why isn't the height being passed down to be able to use 100%
