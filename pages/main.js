@@ -283,18 +283,12 @@ const ImageSection = ({ index }) => {
 
 const Main = () => {
 	return (
-		<>
-			{/* todo: move this to document  */}
-			<Head>
-				<link rel="stylesheet" href="https://use.typekit.net/ejf4jfz.css" />
-			</Head>
-			<main>
-				{info.map((item, index) => {
-					const key = nanoid();
-					return <ImageSection index={index} key={key} />;
-				})}
-			</main>
-		</>
+		<main>
+			{info.map((item, index) => {
+				const key = nanoid();
+				return <ImageSection index={index} key={key} />;
+			})}
+		</main>
 	);
 };
 
