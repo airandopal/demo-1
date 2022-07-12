@@ -6,6 +6,7 @@
         "prettier",
         // "prettier/react",
         "plugin:@next/next/recommended",
+        "plugin:tailwindcss/recommended"
         // "plugin:cypress/recommended"
     ],
     // is throwing an error?
@@ -31,7 +32,7 @@
         "prettier",
         "react",
         "jsx-a11y",
-        "eslint-plugin-tailwindcss"
+        "tailwindcss"
         // "eslint-config-prettier",
         // "eslint-config-next"
     ],
