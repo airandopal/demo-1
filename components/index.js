@@ -60,23 +60,23 @@ export const ImageItem = ({
 	const imageWrapperClasses = `og-image og-image--style-${bgImageNumber} border-2 border-solid border-pink-300 ${transformOrigin} relative my-0 mx-[1vw] grid max-w-[30vw] translate-x-0 translate-y-0 cursor-pointer overflow-hidden ${imageStyleOptions[imageClass].all}`;
 	// note: tailwind does not like dynamic bg url with variable: bg-[url("/assets/${bgImageNumber}.jpg")]
 	// note: tailwind likes to see the class in the file I guess. without this, in dev, the bgImageurlClassForTailwind doesn't work. But I have a theory that in prod it will.
-	const bgs = {
-		"image-1": "bg-[url('/assets/1.jpg')]",
-		"image-3": "bg-[url('/assets/3.jpg')]",
-		"image-2": "bg-[url('/assets/2.jpg')]",
-		"image-4": "bg-[url('/assets/4.jpg')]",
-		"image-5": "bg-[url('/assets/5.jpg')]",
-		"image-6": "bg-[url('/assets/6.jpg')]",
-		"image-7": "bg-[url('/assets/7.jpg')]",
-		"image-8": "bg-[url('/assets/8.jpg')]",
-		"image-9": "bg-[url('/assets/9.jpg')]",
-		"image-10": "bg-[url('/assets/10.jpg')]",
-		"image-11": "bg-[url('/assets/11.jpg')]",
-		"image-12": "bg-[url('/assets/12.jpg')]",
-		"image-13": "bg-[url('/assets/13.jpg')]",
-		"image-14": "bg-[url('/assets/14.jpg')]",
-		"image-15": "bg-[url('/assets/15.jpg')]"
-	};
+	// const bgs = {
+	// 	"image-1": "bg-[url('/assets/1.jpg')]",
+	// 	"image-3": "bg-[url('/assets/3.jpg')]",
+	// 	"image-2": "bg-[url('/assets/2.jpg')]",
+	// 	"image-4": "bg-[url('/assets/4.jpg')]",
+	// 	"image-5": "bg-[url('/assets/5.jpg')]",
+	// 	"image-6": "bg-[url('/assets/6.jpg')]",
+	// 	"image-7": "bg-[url('/assets/7.jpg')]",
+	// 	"image-8": "bg-[url('/assets/8.jpg')]",
+	// 	"image-9": "bg-[url('/assets/9.jpg')]",
+	// 	"image-10": "bg-[url('/assets/10.jpg')]",
+	// 	"image-11": "bg-[url('/assets/11.jpg')]",
+	// 	"image-12": "bg-[url('/assets/12.jpg')]",
+	// 	"image-13": "bg-[url('/assets/13.jpg')]",
+	// 	"image-14": "bg-[url('/assets/14.jpg')]",
+	// 	"image-15": "bg-[url('/assets/15.jpg')]"
+	// };
 
 	return (
 		<div ref={imageWrapper} onMouseEnter={onEnter} onMouseLeave={onLeave} className={imageWrapperClasses}>
