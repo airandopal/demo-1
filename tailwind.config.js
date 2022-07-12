@@ -40,7 +40,7 @@ module.exports = {
 			},
 			animation: {
 				"custom-loading": "loaderAnim 0.7s linear infinite alternate forwards",
-				"fade-in-up": "fade-in-up 0.5s ease-out"
+				"fade-in-up": "fade-in-up 1.2s ease-out"
 			},
 			keyframes: {
 				loaderAnim: {
