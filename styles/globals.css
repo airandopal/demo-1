@@ -5,6 +5,8 @@
 
 :root {
     @apply text-lg;
+    /* note: line height gets turned on with text-lg so need to remove it */
+    line-height: 0;
 }
 
 /* ℹ️ Base selector: body */
