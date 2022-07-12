@@ -81,7 +81,6 @@ export const ImageItem = ({
 		console.log(`REVERSING`);
 		timeline.current && timeline.current.reverse();
 	};
-	const bgImageUrl = `url("/assets/${bgImageNumber}.jpg")`;
 	const restOfImageRepetitions = [...Array(dataRepetitionElems - 1).keys()];
 	const image__shared_classes = `relative w-full h-full origin-[inherit] will-change-transform rounded-[inherit] image-grid`;
 	const image__wrap_classes = image__shared_classes;
