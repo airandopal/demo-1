@@ -3,13 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/* todo: how to get the tailwind default line height off  */
-/* @layer utilities {
-  body {
-    line-height: none !important; 
-  }
-} */
 :root {
     @apply text-lg;
     /* note: line height gets turned on with text-lg so need to remove it */
