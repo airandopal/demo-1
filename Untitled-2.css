@@ -53,7 +53,7 @@ body {
 @keyframes loaderAnim {
 	to {
 		opacity: 1;
-		transform: scale3d(0.5,0.5,1);
+		transform: scale3d(0.5, 0.5, 1);
 	}
 }
 
@@ -77,9 +77,9 @@ a:focus {
 }
 
 /* a:focus:not(:focus-visible) { */
-	/* Remove the focus indicator on mouse-focus for browsers
+/* Remove the focus indicator on mouse-focus for browsers
 	 that do support :focus-visible */
-	/* background: transparent; */
+/* background: transparent; */
 /* } */
 
 a:focus-visible {
@@ -202,7 +202,7 @@ a:focus-visible {
 	border-radius: 145px 145px 0 0;
 }
 
-.image > .image__element,
+.image>.image__element,
 .image__wrap {
 	transform-origin: inherit;
 	position: relative;
