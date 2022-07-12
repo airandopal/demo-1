@@ -3,7 +3,8 @@
 import gsap from "gsap";
 import React, { useRef, useEffect } from "react";
 import { nanoid } from "../lib/utils.js";
-import { imageStyleOptions, imageData } from "../lib/data.js";
+import { imageData } from "../lib/data.js";
+
 
 export const ImageItem = ({
 	data: {
@@ -76,6 +77,12 @@ export const ImageItem = ({
 	// 	"image-13": "bg-[url('/assets/13.jpg')]",
 	// 	"image-14": "bg-[url('/assets/14.jpg')]",
 	// 	"image-15": "bg-[url('/assets/15.jpg')]"
+	// };
+	// const imageStyleOptions = {
+	// 	imageStyle1: { height: "h-[450px]", width: "w-[285px]", all: "w-[285px] h-[450px] rounded-[145px]" },
+	// 	imageStyle2: { height: "h-[320px]", width: "w-[320px]", all: "w-[320px] h-[320px] rounded-[50%]" },
+	// 	imageStyle3: { height: "h-[450px]", width: "w-[285px]", all: "w-[285px] h-[450px] rounded" },
+	// 	imageStyle4: { height: "h-[450px]", width: "w-[285px]", all: "w-[285px] h-[450px] rounded-tl rounded-t-[145px] rounded-b-none" }
 	// };
 
 	// todo: ooh interesting, mix up the photos between the layers
