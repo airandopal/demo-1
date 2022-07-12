@@ -22,8 +22,7 @@ const ImageItem = ({
 		dataRepetitionInitialScale,
 		dataRepetitionDuration,
 		dataRepetitionEase,
-		dataRepetitionStagger,
-		...props
+		dataRepetitionStagger
 	}
 }) => {
 	const imageWrapper = useRef();
