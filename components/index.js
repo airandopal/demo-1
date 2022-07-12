@@ -5,6 +5,12 @@ import React, { useRef, useEffect } from "react";
 import { nanoid } from "../lib/utils.js";
 import { imageData } from "../lib/data.js";
 
+const imageStyleOptions = {
+	imageStyle1: { height: "h-[450px]", width: "w-[285px]", all: "w-[285px] h-[450px] rounded-[145px]" },
+	imageStyle2: { height: "h-[320px]", width: "w-[320px]", all: "w-[320px] h-[320px] rounded-[50%]" },
+	imageStyle3: { height: "h-[450px]", width: "w-[285px]", all: "w-[285px] h-[450px] rounded" },
+	imageStyle4: { height: "h-[450px]", width: "w-[285px]", all: "w-[285px] h-[450px] rounded-tl rounded-t-[145px] rounded-b-none" }
+};
 
 export const ImageItem = ({
 	data: {
@@ -62,12 +68,6 @@ export const ImageItem = ({
 	// note: tailwind does not like dynamic bg url with variable: bg-[url("/assets/${bgImageNumber}.jpg")]
 	// note: tailwind likes to see the class in the file I guess, even if its commented out. without this, in dev, the bgImageurlClassForTailwind doesn't work. But I have a theory that in prod it will.
 	// todo: ooh interesting, mix up the photos between the layers
-	const imageStyleOptions = {
-		imageStyle1: { height: "h-[450px]", width: "w-[285px]", all: "w-[285px] h-[450px] rounded-[145px]" },
-		imageStyle2: { height: "h-[320px]", width: "w-[320px]", all: "w-[320px] h-[320px] rounded-[50%]" },
-		imageStyle3: { height: "h-[450px]", width: "w-[285px]", all: "w-[285px] h-[450px] rounded" },
-		imageStyle4: { height: "h-[450px]", width: "w-[285px]", all: "w-[285px] h-[450px] rounded-tl rounded-t-[145px] rounded-b-none" }
-	};
 
 	// console.log(`imageStyleOptions[imageClass].all`, imageStyleOptions[imageClass].all)
 	return (
