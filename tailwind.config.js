@@ -21,13 +21,7 @@ module.exports = {
       backgroundPosition: {
         'fifty-fifty': '50% 50%'
       },
-      // backgroundColor: {
-      //   'red-special': 'pink'
-      // },
       backgroundImage: {
-        'hero-pattern': "url('/img/hero-pattern.svg')",
-        'my_bg_image1' : "url('../public/assets/1.jpg')",
-        'my_bg_image2' : "url('./public/assets/1.jpg')",
         'url-1': "url('/assets/1.jpg')",
         'url-2': "url('/assets/2.jpg')",
         'url-two': "url('/assets/two.jpg')",
