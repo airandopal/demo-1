@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
 	content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
 	theme: {
@@ -49,5 +51,13 @@ module.exports = {
 			}
 		}
 	},
-	plugins: []
+	plugins: [
+		plugin(function ({ addComponents }) {
+			addComponents({
+				".image-grid": {
+					"grid-area": "1/1/2/2"
+				}
+			});
+		})
+	]
 };
