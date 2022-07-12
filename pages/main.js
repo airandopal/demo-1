@@ -26,17 +26,6 @@ import { useGlobalState } from "../lib/global-state.js";
 
 // todo: 	<body class="loading cda-hidemobile">
 
-const mainClasses = ["fixed", "z-[1000]", "content-['']"];
-const classes = [...mainClasses];
-const prefixes = ["before", "after"];
-const sharedBeforeAndAfter = classes.flatMap((twClass) => prefixes.map((prefix) => `${prefix}:${twClass}`)).join(" ");
-console.log({ sharedBeforeAndAfter });
-
-const before = `before:top-0 before:left-0 before:w-full before:h-full before:bg-bg`;
-const after = `after:top-[50%] after:left-[50%] after:w-[60px] after:h-[60px] after:mt-[-30px] after:mr-0 after:mb-0 after:ml-[-30px] after:rounded-[50%] after:opacity-40 after:bg-link after:animate-custom-loading`;
-const loadingClasses = `${sharedBeforeAndAfter} ${before} ${after}`;
-console.log({ loadingClasses });
-
 const Main = () => {
 	const loadingState = useGlobalState((state) => state.loadingState);
 	const toggleLoadingState = useGlobalState((state) => state.toggleLoadingState);
@@ -52,7 +41,12 @@ const Main = () => {
 	}, []); // runOnce, toggleLoadingState
 
 	return (
-		<main className={loadingState ? loadingClasses : "animate-fade-in-up"}>
+		<main className={loadingState ? "" : "animate-fade-in-up"}>
+			{loadingState && (
+				<aside className="fixed top-0 z-[1000] flex h-screen w-screen items-center justify-center bg-bg">
+					<div className="h-[60px] w-[60px] animate-custom-loading rounded-[50%] bg-link opacity-40"></div>
+				</aside>
+			)}
 			{imageData.map((item, index) => {
 				const key = nanoid();
 				return <ImageSection index={index} key={key} />;
