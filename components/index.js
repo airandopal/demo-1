@@ -5,8 +5,11 @@ import React, { useRef, useEffect } from "react";
 import { nanoid } from "../lib/utils.js";
 import { imageData } from "../lib/data.js";
 
-// note: tailwind does not like dynamic bg url with variable: bg-[url("/assets/${bgImageNumber}.jpg")]
-// note: tailwind likes to see the class in the file I guess, even if its commented out. without this, in dev, the bgImageurlClassForTailwind doesn't work. [in dev or prod, reliably]
+/**
+ * note: tailwind does not like dynamic bg url with variable: bg-[url("/assets/${bgImageNumber}.jpg")]
+ * note: tailwind likes to see the class in the file I guess, even if its commented out. without this, in dev, the bgImageurlClassForTailwind doesn't work. [in dev or prod, reliably]
+ * further info: https://tailwindcss.com/docs/content-configuration#class-detection-in-depth
+ */
 const imageStyleOptions = {
 	imageStyle1: { height: "h-[450px]", width: "w-[285px]", all: "w-[285px] h-[450px] rounded-[145px]" },
 	imageStyle2: { height: "h-[320px]", width: "w-[320px]", all: "w-[320px] h-[320px] rounded-[50%]" },
