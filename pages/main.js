@@ -1,7 +1,7 @@
 import Head from "next/head";
 import gsap from "gsap";
 import { customAlphabet } from "nanoid";
-import { useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 
 
 const nanoid = customAlphabet("1234567890abcdef", 10);
