@@ -39,13 +39,24 @@ module.exports = {
 				"url-15": "url('/assets/15.jpg')"
 			},
 			animation: {
-				"custom-loading": "loaderAnim 0.7s linear infinite alternate forwards"
+				"custom-loading": "loaderAnim 0.7s linear infinite alternate forwards",
+				"fade-in-up": "fade-in-up 0.5s ease-out"
 			},
 			keyframes: {
 				loaderAnim: {
 					to: {
 						opacity: "1",
 						transform: "scale3d(0.5,0.5,1)"
+					}
+				},
+				"fade-in-up": {
+					"0%": {
+						opacity: "0",
+						transform: "translateY(10px)"
+					},
+					"100%": {
+						opacity: "1",
+						transform: "translateY(0)"
 					}
 				}
 			}

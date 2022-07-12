@@ -1,9 +1,10 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 /* eslint-disable react/prop-types */
-import React from "react";
+import React, { useEffect } from "react";
 import { nanoid } from "../lib/utils.js";
 import { imageData } from "../lib/data.js";
 import { ImageSection } from "../components/index.js";
+import { useGlobalState } from "../lib/global-state.js";
 
 // done: check mobile view
 // done: clean css
@@ -24,9 +25,34 @@ import { ImageSection } from "../components/index.js";
 // later: jsdoc and typescript
 
 // todo: 	<body class="loading cda-hidemobile">
+
+const mainClasses = ["fixed", "z-[1000]", "content-['']"];
+const classes = [...mainClasses];
+const prefixes = ["before", "after"];
+const sharedBeforeAndAfter = classes.flatMap((twClass) => prefixes.map((prefix) => `${prefix}:${twClass}`)).join(" ");
+console.log({ sharedBeforeAndAfter });
+
+const before = `before:top-0 before:left-0 before:w-full before:h-full before:bg-bg`;
+const after = `after:top-[50%] after:left-[50%] after:w-[60px] after:h-[60px] after:mt-[-30px] after:mr-0 after:mb-0 after:ml-[-30px] after:rounded-[50%] after:opacity-40 after:bg-link after:animate-custom-loading`;
+const loadingClasses = `${sharedBeforeAndAfter} ${before} ${after}`;
+console.log({ loadingClasses });
+
 const Main = () => {
+	const loadingState = useGlobalState((state) => state.loadingState);
+	const toggleLoadingState = useGlobalState((state) => state.toggleLoadingState);
+	const runOnce = true;
+
+	useEffect(() => {
+		console.log(`running use effect`);
+		const showLoadingTimer = setTimeout(() => {
+			toggleLoadingState();
+		}, 2800);
+
+		return () => clearTimeout(showLoadingTimer);
+	}, []); // runOnce, toggleLoadingState
+
 	return (
-		<main>
+		<main className={loadingState ? loadingClasses : "animate-fade-in-up"}>
 			{imageData.map((item, index) => {
 				const key = nanoid();
 				return <ImageSection index={index} key={key} />;
