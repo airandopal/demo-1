@@ -84,10 +84,12 @@ a {
 /* ✨ TailwindCSS: "h-full relative w-full" */
 /* ⚠️ Some properties could not be matched with Tailwind classes. Use @apply to extend a CSS rule: */
 .image > .image__element,
+.image__element,
 .image__wrap {
-  @apply relative w-full h-full;
+  @apply relative w-full;
+  /* h-full; */
   transform-origin: inherit;
-  grid-area: 1 / 1 / 2 / 2;
+  grid-area: 1/1/2/2;
   will-change: transform;
   border-radius: inherit;
 }
