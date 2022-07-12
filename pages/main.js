@@ -249,7 +249,7 @@ const ImageSection = ({ index }) => {
     const { images, name1, name2 } = info[index]
     console.log({ images })
     return (
-        <section className="og-content flex flex-wrap justify-between mx-auto text-center justify-items-center mt-[10vh] mb-[40vh] mw-[1200px]">
+        <section className="og-content flex flex-wrap justify-between mx-auto text-center justify-items-center mt-[10vh] mb-[40vh] max-w-[1200px]">
             {images.map((data) => {
                 const key = nanoid()
                 return <ImageItem data={data} key={key} />
