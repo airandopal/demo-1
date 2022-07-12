@@ -13,16 +13,7 @@ body {
   @apply m-0 antialiased font-medium text-text bg-bg font-quasimoda;
 }
 
-/* ℹ️ Base selector: .image > .image__element, .image__wrap */
-/* ✨ TailwindCSS: "h-full relative w-full" */
-/* ⚠️ Some properties could not be matched with Tailwind classes. Use @apply to extend a CSS rule: */
-.image > .image__element,
-.image__element,
-.image__wrap {
-  @apply relative w-full;
-  /* h-full; */
-  transform-origin: inherit;
+.og-image__element,
+.og-image__wrap {
   grid-area: 1/1/2/2;
-  will-change: transform;
-  border-radius: inherit;
 }
