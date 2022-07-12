@@ -1,8 +1,8 @@
-import { customAlphabet } from 'nanoid'
 import Head from "next/head";
-import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
-// import { ImageHover } from './imageHover';
+import { customAlphabet } from 'nanoid'
+import { useRef, useEffect } from 'react';
+
 
 // preloadImages('[data-repetition]').then(() => {
 //     document.body.classList.remove('loading');
