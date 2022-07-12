@@ -86,7 +86,7 @@ export const ImageItem = ({
 	// };
 
 	// todo: ooh interesting, mix up the photos between the layers
-	console.log(`imageStyleOptions[imageClass].all`, imageStyleOptions[imageClass].all)
+	// console.log(`imageStyleOptions[imageClass].all`, imageStyleOptions[imageClass].all)
 	return (
 		<div ref={imageWrapper} onMouseEnter={onEnter} onMouseLeave={onLeave} className={`og-image og-image--style-${bgImageNumber} ${imageWrapperClasses}`}>
 			{/* todo: this height needs to be passed down but not sure why  */}
