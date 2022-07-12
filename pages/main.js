@@ -26,11 +26,6 @@ const ImageItem = ({ data: { imageClass, bgImageNumber,
     const firstInnerImage = useRef()
     const timeline = useRef()
 
-    // gsap.set(this.DOM.el, {backgroundImage: 'none'});
-    // todo: remove background image - but not sure when this is supposed to happen? is it on hover? 
-    // bg-[url('/assets/${bgImageNumber}.jpg')] 
-
-    // gsap.set([this.DOM.el, this.DOM.innerElems[0]], {transformOrigin: this.DOM.el.dataset.repetitionOrigin || '50% 50%'});
     const origin1 = dataRepetitionOrigin ? dataRepetitionOrigin.split(' ')[0] : '50%'
     const origin2 = dataRepetitionOrigin ? dataRepetitionOrigin.split(' ')[1] : '50%'
     const transformOrigin = `origin-[${origin1}_${origin2}]`
