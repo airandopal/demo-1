@@ -1,3 +1,5 @@
+/* eslint-disable tailwindcss/no-custom-classname */
+/* eslint-disable react/prop-types */
 import Head from "next/head";
 import gsap from "gsap";
 import { customAlphabet } from "nanoid";
