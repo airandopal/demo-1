@@ -4,11 +4,6 @@ import { customAlphabet } from 'nanoid'
 import { useRef, useEffect } from 'react';
 
 
-// preloadImages('[data-repetition]').then(() => {
-//     document.body.classList.remove('loading');
-//     // Initialize the hover effect on the images
-//     [...document.querySelectorAll('.image')].forEach(el => new ImageHover(el));
-// });
 const nanoid = customAlphabet('1234567890abcdef', 10)
 
 const imageStyleOptions = {
@@ -27,7 +22,7 @@ const ImageItem = ({ data: { imageClass, bgImageNumber,
     dataRepetitionStagger, ...props } }) => {
 
     const imageWrapper = useRef()
-    const queryEl = gsap.utils.selector(imageWrapper); // todo: .current?
+    const queryEl = gsap.utils.selector(imageWrapper);
     const firstInnerImage = useRef()
     const timeline = useRef()
 
@@ -39,7 +34,6 @@ const ImageItem = ({ data: { imageClass, bgImageNumber,
     const origin1 = dataRepetitionOrigin ? dataRepetitionOrigin.split(' ')[0] : '50%'
     const origin2 = dataRepetitionOrigin ? dataRepetitionOrigin.split(' ')[1] : '50%'
     const transformOrigin = `origin-[${origin1}_${origin2}]`
-    console.log({ origin1, origin2, transformOrigin })
 
     const property = dataRepetitionAnimate || 'scale';
     const firstInnerElementProperties = {
@@ -55,21 +49,16 @@ const ImageItem = ({ data: { imageClass, bgImageNumber,
     useEffect(() => {            
         timeline.current = gsap.timeline({ paused: true })
                                 .set(firstInnerImage.current, firstInnerElementProperties)
-                                .to(queryEl(".image__element"), animationProperties, 0) // li:not(.active) > a
+                                .to(queryEl(".image__element"), animationProperties, 0)
     });
 
     // custom-bg-${bgImageNumber} - before when i thought needed the bg image
     const onEnter = ({ currentTarget }) => {
-        // gsap.to(currentTarget, { backgroundColor: "#e77614" });
-        // this.hoverTimeline.play();
         console.log(`PLAYING`)
         timeline.current && timeline.current.play()
-
       };
       
       const onLeave = ({ currentTarget }) => {
-        // gsap.to(currentTarget, { backgroundColor: "#28a92b" });
-        // this.hoverTimeline.reverse();
         console.log(`REVERSING`)
         timeline.current && timeline.current.reverse()
       };
