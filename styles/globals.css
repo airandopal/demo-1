@@ -90,9 +90,6 @@ a {
   border-radius: inherit;
 }
 
-.image__wrap {
-  /* ✨ TailwindCSS: "overflow-hidden" */
-}
 
 /* ℹ️ Base selector: .image__element */
 /* ✨ TailwindCSS: "bg-cover h-full w-full" */
