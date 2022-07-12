@@ -16,7 +16,7 @@ const imageStyleOptions = {
 	imageStyle3: { height: "h-[450px]", width: "w-[285px]", all: "w-[285px] h-[450px] rounded" },
 	imageStyle4: { height: "h-[450px]", width: "w-[285px]", all: "w-[285px] h-[450px] rounded-tl rounded-t-[145px] rounded-b-none" }
 };
-const bgs = {
+const _bgs = {
 	"image-1": "bg-[url('/assets/1.jpg')]",
 	"image-3": "bg-[url('/assets/3.jpg')]",
 	"image-2": "bg-[url('/assets/2.jpg')]",
