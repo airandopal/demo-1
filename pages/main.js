@@ -5,6 +5,20 @@ import gsap from "gsap";
 import { customAlphabet } from "nanoid";
 import React, { useRef, useEffect } from "react";
 
+// done: check mobile view
+// done: clean css
+// todo: separate out data 
+// todo: add loading - // todo: 	<body class="loading cda-hidemobile">
+// todo: test pixel for pixel. on screenshots at different point
+// todo: background iamge solution
+// todo: is there a way to snapshot test animations?
+// todo: feature - add being able to add ones dynamically
+// todo: add sections with shapes, elements with shapes
+// later: why isn't the height being passed down to be able to use 100%
+// later: should i be using layout effect?
+// later: clean eslint
+// later: why doesnt background image work for tailwind - try it one more time.
+// later: jsdoc and typescript
 
 const nanoid = customAlphabet("1234567890abcdef", 10);
 
@@ -258,9 +272,9 @@ const ImageSection = ({ index }) => {
 				const key = nanoid();
 				return <ImageItem data={data} key={key} />;
 			})}
-			<h2 className="col-span-3 col-start-1 mx-0 mb-0 mt-[10vh] w-full text-[11vw] leading-[.65]">
-				<span className="block font-forma font-medium uppercase">{name1}</span>
-				<span className="font-tenez font-light uppercase not-italic">{name2}</span>
+			<h2 className="og-content__title col-span-3 col-start-1 mx-0 mb-0 mt-[10vh] w-full text-[11vw] leading-[.65]">
+				<span className="og-content__title-first block font-forma font-medium uppercase">{name1}</span>
+				<span className="og-content__title-second font-tenez font-light uppercase not-italic">{name2}</span>
 			</h2>
 		</section>
 	);
