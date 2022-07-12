@@ -12,8 +12,3 @@
 body {
   @apply m-0 antialiased font-medium text-text bg-bg font-quasimoda;
 }
-
-.og-image__element,
-.og-image__wrap {
-  grid-area: 1/1/2/2;
-}
