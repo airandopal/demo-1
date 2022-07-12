@@ -7,10 +7,10 @@ import { useRef, useEffect } from 'react';
 const nanoid = customAlphabet('1234567890abcdef', 10)
 
 const imageStyleOptions = {
-    imageStyle1: "w-[285px] h-[450px] rounded-[145px]",
-    imageStyle2: "w-[320px] h-[320px] rounded-[50%]",
-    imageStyle3: "w-[285px] h-[450px] rounded",
-    imageStyle4: "w-[285px] h-[450px] rounded-tl rounded-t-[145px] rounded-b-none",
+    imageStyle1: { height: "h-[450px]", width: "w-[285px]", all: "w-[285px] h-[450px] rounded-[145px]" },
+    imageStyle2: { height: "h-[320px]", width: "w-[320px]", all: "w-[320px] h-[320px] rounded-[50%]" },
+    imageStyle3: { height: "h-[450px]", width: "w-[285px]", all: "w-[285px] h-[450px] rounded" },
+    imageStyle4: { height: "h-[450px]", width: "w-[285px]", all: "w-[285px] h-[450px] rounded-tl rounded-t-[145px] rounded-b-none" },
 }
 const ImageItem = ({ data: { imageClass, bgImageNumber, 
     dataRepetitionElems, 
@@ -62,17 +62,18 @@ const ImageItem = ({ data: { imageClass, bgImageNumber,
         console.log(`REVERSING`)
         timeline.current && timeline.current.reverse()
       };
-const bgImageUrl = `url("/assets/${bgImageNumber}.jpg")`
+    const bgImageUrl = `url("/assets/${bgImageNumber}.jpg")`
     return (
-        <div ref={imageWrapper} onMouseEnter={onEnter} onMouseLeave={onLeave} className={`og-image og-image--style-${bgImageNumber} ${transformOrigin} translate-x-0 translate-y-0 relative grid my-0 overflow-hidden cursor-pointer mw-[30vw] mx-[1vw] ${imageStyleOptions[imageClass]}`} {...props}>
+        <div ref={imageWrapper} onMouseEnter={onEnter} onMouseLeave={onLeave} className={`og-image og-image--style-${bgImageNumber} ${transformOrigin} translate-x-0 translate-y-0 relative grid my-0 overflow-hidden cursor-pointer max-w-[30vw] mx-[1vw] ${imageStyleOptions[imageClass].all}`} {...props}>
             {/* first repetition  */}
-            <div class="image__wrap">
+            {/* todo: this height needs to be passed down but not sure why  */}
+            <div class={`image__wrap overflow-hidden ${imageStyleOptions[imageClass].height}`}>
                 <div ref={firstInnerImage} class={`image__element ${transformOrigin} translate-x-0 translate-y-0`} style={{ backgroundImage: bgImageUrl }}></div>
             </div>
             {/* rest of repetitions  */}
             {[...Array(dataRepetitionElems - 1).keys()].map(index => {
                 const key = nanoid()
-                return <div key={key} class="image__element" style={{ backgroundImage: bgImageUrl }}></div>
+                return <div key={key} class={`image__element ${imageStyleOptions[imageClass].height}`} style={{ backgroundImage: bgImageUrl }}></div>
             })}
         </div>
     )
