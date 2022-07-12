@@ -48,7 +48,7 @@ const ImageItem = ({
 	};
 
 	useEffect(() => {
-		timeline.current = gsap.timeline({ paused: true }).set(firstInnerImage.current, firstInnerElementProperties).to(queryEl(".image__element"), animationProperties, 0);
+		timeline.current = gsap.timeline({ paused: true }).set(firstInnerImage.current, firstInnerElementProperties).to(queryEl(".og-image__element"), animationProperties, 0);
 	});
 
 	// custom-bg-${bgImageNumber} - before when i thought needed the bg image
