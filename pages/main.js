@@ -9,7 +9,8 @@ import { useGlobalState } from "../lib/global-state.js";
 // done: check mobile view
 // done: clean css
 // done: separate out data
-// todo: add loading - // todo: 	<body class="loading cda-hidemobile">
+// done: add loading
+// todo: not right on deploy
 // todo: background iamge solution
 // todo: test pixel for pixel. on screenshots at different point
 // todo: add jsonconig for imports
@@ -23,6 +24,7 @@ import { useGlobalState } from "../lib/global-state.js";
 // later: clean eslint
 // later: why doesnt background image work for tailwind - try it one more time.
 // later: jsdoc and typescript
+// later; working with aspect ratios
 
 // todo: 	<body class="loading cda-hidemobile">
 

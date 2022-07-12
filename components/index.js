@@ -59,7 +59,7 @@ export const ImageItem = ({
 	const image__element_classes = `${image__shared_classes} w-full bg-cover bg-fifty-fifty`;
 	const imageWrapperClasses = `og-image og-image--style-${bgImageNumber} border-2 border-solid border-pink-300 ${transformOrigin} relative my-0 mx-[1vw] grid max-w-[30vw] translate-x-0 translate-y-0 cursor-pointer overflow-hidden ${imageStyleOptions[imageClass].all}`;
 	// note: tailwind does not like dynamic bg url with variable: bg-[url("/assets/${bgImageNumber}.jpg")]
-	// note: tailwind likes to see the class in the file I guess. without this, in dev, the bgImageurlClassForTailwind doesn't work. But I have a theory that in prod it will.
+	// note: tailwind likes to see the class in the file I guess, even if its commented out. without this, in dev, the bgImageurlClassForTailwind doesn't work. But I have a theory that in prod it will.
 	// const bgs = {
 	// 	"image-1": "bg-[url('/assets/1.jpg')]",
 	// 	"image-3": "bg-[url('/assets/3.jpg')]",
@@ -78,6 +78,7 @@ export const ImageItem = ({
 	// 	"image-15": "bg-[url('/assets/15.jpg')]"
 	// };
 
+	// todo: ooh interesting, mix up the photos between the layers
 	return (
 		<div ref={imageWrapper} onMouseEnter={onEnter} onMouseLeave={onLeave} className={imageWrapperClasses}>
 			{/* todo: this height needs to be passed down but not sure why  */}
