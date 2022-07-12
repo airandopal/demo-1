@@ -62,22 +62,26 @@ const ImageItem = ({
 		timeline.current && timeline.current.reverse();
 	};
 	const bgImageUrl = `url("/assets/${bgImageNumber}.jpg")`;
+
+	const image__shared_classes = `relative w-full h-full origin-[inherit] will-change-transform rounded-[inherit] image-grid`;
+	const image__wrap_classes = image__shared_classes;
+	const image__element_classes = `${image__shared_classes} w-full bg-cover bg-fifty-fifty`;
+
 	return (
 		<div
 			ref={imageWrapper}
 			onMouseEnter={onEnter}
 			onMouseLeave={onLeave}
-			className={`og-image og-image--style-${bgImageNumber} ${transformOrigin} relative my-0 mx-[1vw] grid max-w-[30vw] translate-x-0 translate-y-0 cursor-pointer overflow-hidden ${imageStyleOptions[imageClass].all}`}
-			{...props}>
+			className={`og-image og-image--style-${bgImageNumber} border-2 border-solid border-pink-300 ${transformOrigin} relative my-0 mx-[1vw] grid max-w-[30vw] translate-x-0 translate-y-0 cursor-pointer overflow-hidden ${imageStyleOptions[imageClass].all}`}>
 			{/* first repetition  */}
 			{/* todo: this height needs to be passed down but not sure why  */}
-			<div className={`image__wrap overflow-hidden ${imageStyleOptions[imageClass].height}`}>
-				<div ref={firstInnerImage} className={`image__element ${transformOrigin} translate-x-0 translate-y-0`} style={{ backgroundImage: bgImageUrl }}></div>
+			<div className={`og-image__wrap ${image__wrap_classes} overflow-hidden ${imageStyleOptions[imageClass].height}`}>
+				<div ref={firstInnerImage} className={`og-image__element ${image__element_classes} ${transformOrigin} translate-x-0 translate-y-0`} style={{ backgroundImage: bgImageUrl }}></div>
 			</div>
 			{/* rest of repetitions  */}
 			{[...Array(dataRepetitionElems - 1).keys()].map((index) => {
 				const key = nanoid();
-				return <div key={key} className={`image__element ${imageStyleOptions[imageClass].height}`} style={{ backgroundImage: bgImageUrl }}></div>;
+				return <div key={key} className={`og-image__element ${image__element_classes} ${imageStyleOptions[imageClass].height}`} style={{ backgroundImage: bgImageUrl }}></div>;
 			})}
 		</div>
 	);
