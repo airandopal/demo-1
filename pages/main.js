@@ -1,17 +1,16 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 /* eslint-disable react/prop-types */
 import React, { useEffect } from "react";
-import { nanoid } from "../lib/utils.js";
-import { imageData } from "../lib/data.js";
-import { ImageSection } from "../components/index.js";
-import { useGlobalState } from "../lib/global-state.js";
+import { nanoid } from "@/utils";
+import { imageData } from "@/data";
+import { ImageSection } from "@/components";
+import { useGlobalState } from "@/global-state";
 
 // done: check mobile view
 // done: clean css
 // done: separate out data
 // done: add loading
-// todo: not right on deploy
-// todo: background iamge solution
+// done: not right on deploy
 // todo: test pixel for pixel. on screenshots at different point
 // todo: add jsonconig for imports
 // todo: is there a way to snapshot test animations?
@@ -21,6 +20,7 @@ import { useGlobalState } from "../lib/global-state.js";
 // todo: can i put the bg urls in config?
 // zod?
 // maybe add some framer motion and reveals.
+// later: background iamge solution
 // later: why isn't the height being passed down to be able to use 100%
 // later: should i be using layout effect?
 // later: clean eslint

@@ -2,8 +2,8 @@
 /* eslint-disable react/prop-types */
 import gsap from "gsap";
 import React, { useRef, useEffect } from "react";
-import { nanoid } from "../lib/utils.js";
-import { imageData } from "../lib/data.js";
+import { nanoid } from "@/utils";
+import { imageData } from "@/data";
 
 /**
  * note: tailwind does not like dynamic bg url with variable: bg-[url("/assets/${bgImageNumber}.jpg")]
