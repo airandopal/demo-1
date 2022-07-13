@@ -11,10 +11,10 @@ import { useGlobalState } from "@/global-state";
 // done: separate out data
 // done: add loading
 // done: not right on deploy
+// done: add jsonconig for imports
 // todo: test pixel for pixel. on screenshots at different point
-// todo: add jsonconig for imports
 // todo: is there a way to snapshot test animations?
-// todo: feature - add being able to add ones dynamically
+// todo: feature - add being able to add ones dynamically - unsplash, easy way vs tina cms?
 // todo: add sections with shapes, elements with shapes
 // todo: ooh interesting, mix up the photos between the layers
 // todo: can i put the bg urls in config?
