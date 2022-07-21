@@ -45,9 +45,9 @@ const Main = () => {
 	}, []); // runOnce, toggleLoadingState
 
 	return (
-		<main className={loadingState ? "" : "animate-fade-in-up"}>
+		<main data-cy={loadingState ? 'loading' : 'loaded'} className={loadingState ? "" : "animate-fade-in-up"}>
 			{loadingState && (
-				<aside className="fixed top-0 z-[1000] flex h-screen w-screen items-center justify-center bg-bg">
+				<aside data-cy="loading-screen" className="fixed top-0 z-[1000] flex h-screen w-screen items-center justify-center bg-bg">
 					<div className="h-[60px] w-[60px] animate-custom-loading rounded-[50%] bg-link opacity-40"></div>
 				</aside>
 			)}
