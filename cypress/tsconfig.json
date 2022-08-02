@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "types": ["cypress", "cypress-real-events"],
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "incremental": true,
+        "baseUrl": "..",
+        "paths": {
+            "@/root/*": ["/*"],
+            "@/styles": ["styles/globals.css"],
+            "@/styles/*": ["styles/*"],
+            "@/components": ["components/index.js"],
+            "@/components/*": ["components/*"],
+            "@/lib/*": ["lib/*"],
+            "@/data": ["lib/data.js"],
+            "@/utils": ["lib/utils.js"],
+            "@/global-state": ["lib/global-state.js"],
+        }
+      },
+  }
