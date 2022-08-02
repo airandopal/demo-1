@@ -1,5 +1,4 @@
 /* note: https://marketplace.visualstudio.com/items?itemName=csstools.postcss - allowes @ directives to be allowed  */
-/* note: removed to match the original project, no defaults needed: @tailwind base; */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
