@@ -1,4 +1,5 @@
 /// <reference types="cypress" />
+// @ts-ignore
 Cypress.Commands.add('mainWork', ({ additionalWork, version }) => {
 	const imageCountArray = [...Array(15).keys()];
 	const _allData = imageCountArray.reduce((acc, curr) => {
